@@ -15,16 +15,19 @@ namespace ChallengesWithTestsMark8
                     return true;
                 }
             }
+
             return false;
         }
 
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
         {
-            if (numbers == null || numbers.Count() == 0)
+            if(numbers == null || numbers.Count() == 0)
             {
                 return false;
             }
+
             var sum = numbers.Sum();
+
             return (sum % 2 != 0);
         }
 
@@ -34,7 +37,7 @@ namespace ChallengesWithTestsMark8
             var isLower = false;
             var isNumber = false;
 
-            for (int i = 0; i < password.Length;i++)
+            for (int i = 0; i < password.Length; i++)
             {
                 if (char.IsLower(password[i]))
                 {
@@ -49,7 +52,7 @@ namespace ChallengesWithTestsMark8
                     isNumber= true;
                 }
             }
-            if (isLower && isUpper && isNumber)
+            if (isLower == true && isUpper == true && isNumber == true)
             {
                 return true;
             }
@@ -102,7 +105,7 @@ namespace ChallengesWithTestsMark8
 
         public void ChangeAllElementsToUppercase(string[] words)
         {
-            for (int i = 0; 1 < words.Length; i++)
+           for (int i = 0; i < words.Length; i++) 
             {
                 words[i] = words[i].ToUpper();
             }
